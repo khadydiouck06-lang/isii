@@ -267,7 +267,11 @@ para conservar la procedencia de la definición. El catálogo de requisitos podr
 enlazar a los términos de esta sección, pero no los definirá de nuevo.
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
-| --- | --- | --- |
+| --- | --- | --- |* **Coordinador:** Único rol responsable de administrar y moderar el foro, gestionar las cuentas de usuario (aprobar cuidadores y nutricionistas, suspender o eliminar cuentas) y asegurar un entorno seguro en la plataforma.
+* **Cuidador:** Usuario que asiste a los pacientes en la gestión de su dieta. Solo puede acceder a la información de salud del paciente mientras exista una asociación y autorización vigentes. Su cuenta pasa a inactiva a los tres meses de perder dicha asociación y se elimina al año.
+* **Enfermedades Inflamatorias Intestinales (EII):** Condición de salud de los pacientes destinatarios del sistema, que buscan mejorar su calidad de vida y controlar los síntomas de su enfermedad a través de una alimentación adecuada.
+* **Nutricionista:** Rol profesional en la plataforma que agrupa tanto a médicos como a nutricionistas. Requiere acreditación validada para poder publicar recetas como validadas, publicar consejos de salud y ser distinguido con un icono específico en la interfaz.
+* **Receta adaptada:** Proceso por el cual el sistema encuentra recetas adecuadas al perfil, alergias y restricciones del paciente, sin modificar automáticamente los ingredientes ni las cantidades de la receta original.
 
 ## 10. Modelos de análisis
 
