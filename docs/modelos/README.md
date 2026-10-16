@@ -1,145 +1,60 @@
-# Modelo de casos de uso de Proyecto Simbiosis
+# Modelos
 
-| Versión | Fecha | Estado |
-| --- | --- | --- |
-| 1.3 | 05/10/2026 | Plantilla |
+Modelos y diagramas propios del Proyecto Simbiosis (por ejemplo, modelos de dominio, de procesos o de datos) que apoyan la comprensión de los requisitos.
 
-**Iteración de referencia:** [Indica la última iteración incorporada al modelo.]
+## Contenido
 
-Este documento recoge el modelo de casos de uso del proyecto. Se completa a medida que se incorporan funciones. Los diagramas muestran distintas vistas del mismo modelo.
-
-Sustituye las indicaciones entre corchetes por tu contenido. Añade filas cuando las necesites. Si un apartado aún no se ha trabajado, indica que está pendiente. No inventes respuestas para completar la plantilla.
-
-**Trabajo en E1.** El producto principal es el diagrama de la primera vista. Usa las funciones del apartado 4 del [plan de E1](../planificacion/plan-iteracion-e1.md). La anotación de alcance puede ser breve. Los apartados siguientes permiten organizar el modelo y continuarlo después. No se requieren descripciones detalladas de los casos en E1 ni se establece una entrega adicional.
-
-**Evolución del documento.** Mantén este archivo al avanzar de iteración. Conserva los identificadores de los elementos que sigan siendo los mismos. Actualiza los datos iniciales cuando registres una nueva versión del modelo. Cambia el estado de «Plantilla» a «Borrador» al empezar a completarlo. Usa «Revisado» solo después de la revisión correspondiente. Git conservará los estados registrados en commits.
-
-## 1 Alcance del modelo
-
-Explica qué funcionalidad representa el modelo en su estado actual. Indica qué funciones quedan pendientes. En E1, remite al plan para situar el alcance. No copies el catálogo completo.
-
-[Explica el alcance actual y sus límites.]
-
-En iteraciones posteriores, actualiza el alcance acumulado. Distingue las funciones nuevas de las que ya estaban representadas. Una vista puede cubrir solo una parte de un UR o de un módulo.
-
-## 2 Actores
-
-Registra los roles externos que participan en las funciones representadas. Un actor puede ser una persona o un sistema externo. Describe cada rol con una frase breve. No confundas estos roles con las personas del equipo de desarrollo.
-
-| Nombre del actor | Rol que representa |
+| Documento | Finalidad |
 | --- | --- |
-| [Nombre] | [Describe el rol externo.] |
+| [Plantilla del modelo de casos de uso](plantilla-modelo-casos-de-uso.md) | Estructura e instrucciones reutilizables, que se conservan sin cumplimentar. |
+| [Modelo de casos de uso](modelo-casos-de-uso.md) | Documento de trabajo que incorpora los resultados de E1 y se amplía y revisa en las iteraciones siguientes. |
 
-Mantén los mismos nombres en las tablas, los diagramas y las descripciones.
+Cada modelo nuevo debe añadirse a esta carpeta en Markdown (o como diagrama embebido en Markdown) y listarse en la tabla anterior.
 
-[Si existen generalizaciones, identifica el actor general y los actores especializados. Explica qué relación existe entre ellos. Puedes hacer referencia a un diagrama adicional de actores si facilita la lectura. Si no utilizas generalizaciones, indícalo.]
+## Nombres de las imágenes
 
-## 3 Casos de uso
-
-Registra los casos que aparecen en el modelo. Asigna a cada caso un identificador estable. Escribe el nombre con un verbo y un objeto. Resume el objetivo sin describir todos sus pasos.
-
-| Identificador | Nombre | Objetivo | Participantes |
-| --- | --- | --- | --- |
-| [UC-…] | [Nombre] | [Explica el objetivo.] | [Indica los actores que participan.] |
-
-[Indica los actores que participan. Si procede, distingue el actor principal, que busca alcanzar el objetivo del caso de uso y normalmente inicia la interacción, de los actores de apoyo, que proporcionan servicios o información al sistema.]
-
-Esta distinción se establece para cada caso de uso. Un mismo actor puede desempeñar funciones diferentes en distintos casos. No es necesario asignar un actor principal independiente a cada caso incluido.
-
-Al ampliar el modelo, conserva los casos anteriores que sigan siendo válidos. Si revisas un caso, conserva su identificador cuando siga representando el mismo objetivo. No reutilices el identificador de un caso retirado para un caso diferente.
-
-## 4 Diagramas del modelo
-
-Añade la primera vista en E1. En iteraciones posteriores, incorpora las vistas necesarias y revisa las anteriores cuando cambien elementos compartidos.
-
-Para cada vista, incluye un título, una frase sobre su alcance y el diagrama. Todas las vistas deben usar la misma frontera del sistema y nombres compatibles.
-
-### 4.1 Primera vista
-
-**Título:** [Indica el título de la vista.]
-
-**Alcance:** [Explica qué funciones representa esta vista.]
-
-[Inserta aquí el diagrama.]
-
-Si una decisión necesita aclaración, puedes añadir una nota breve junto al diagrama.
-
-**Nombre y ubicación de la imagen.** Guarda las imágenes en `docs/modelos/imagenes/`. Usa este patrón:
+Guarda las imágenes de los diagramas en `docs/modelos/imagenes/`. Utiliza este patrón:
 
 ```text
 tipo-de-diagrama-ambito.png
 ```
 
-El tipo indica qué diagrama contiene la imagen. El ámbito indica qué funciones o elementos representa. Usa minúsculas, sin tildes, eñes ni espacios, y separa las palabras con guiones.
+El tipo identifica el diagrama. El ámbito identifica las funciones, el escenario o los elementos representados. Utiliza minúsculas, sin tildes, eñes ni espacios. Separa las palabras con guiones. No añadas el nombre del estudiante, el código de la práctica, la fecha ni un número de versión. Las vistas de E1 y E2 añaden el sufijo de la iteración al ámbito, conforme a los nombres siguientes.
 
-Para la primera vista de E1, utiliza este nombre común:
+Para los diagramas de casos de uso, el tipo es `casos-de-uso`. El nombre común de la primera vista de E1 es `casos-de-uso-acceso-cuentas-ayuda-e1.png`.
 
-```text
-casos-de-uso-acceso-cuentas-ayuda.png
-```
+| Imagen | Nombre |
+| --- | --- |
+| Vista de acceso, cuentas y ayuda de E1 | `casos-de-uso-acceso-cuentas-ayuda-e1.png` |
+| Vista de salud y recetas de E2 | `casos-de-uso-salud-recetas-e2.png` |
+| Vista separada de actores del ámbito de E1, si se necesita | `casos-de-uso-acceso-cuentas-ayuda-actores-e1.png` |
 
-Inserta la imagen con este enlace relativo:
+Si necesitas más de una imagen para el mismo tipo y ámbito, añade un detalle descriptivo al final. No uses nombres como `imagen1`, `diagrama-final` o `copia-2`. El detalle debe explicar qué distingue esa imagen. No es necesario dividir una vista para utilizar ese sufijo.
 
-```markdown
-![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-acceso-cuentas-ayuda.png)
-```
+Cuando revises una vista, actualiza el archivo con el mismo nombre. Cuando añadas una vista con otro alcance, crea un archivo con otro ámbito. Git conservará los estados anteriores que hayas registrado en commits.
 
-Al revisar esta vista, conserva el nombre del archivo y actualiza la imagen. No añadas la iteración, la versión, la fecha ni tu nombre al archivo. Git conservará las versiones registradas en commits.
+El formato habitual de las imágenes es PNG. Si una actividad admite otro formato, conserva el mismo nombre base y cambia solo la extensión. Un archivo editable de la herramienta utiliza también ese nombre base y su extensión propia.
 
-Si añades una vista diferente, utiliza otro ámbito. Si necesitas varias imágenes del mismo ámbito, añade un detalle que las distinga. La [guía de modelos](README.md) recoge los ejemplos y la convención que se ampliará para otros tipos de diagramas.
+La convención se ampliará en esta guía cuando se incorporen otros tipos de diagramas. Por ejemplo, podrá usar los tipos `clases`, `secuencia` o `actividad`, seguidos del ámbito correspondiente. Estos ejemplos no establecen tareas para las próximas prácticas.
 
-Conserva también el archivo editable de la herramienta cuando esté disponible. Usa el mismo nombre base y la extensión propia de la herramienta. Al revisar una vista, actualiza su imagen y su explicación. Las versiones anteriores quedarán en los commits que incluyan esos archivos.
+Los documentos Markdown utilizan enlaces relativos. Desde un archivo situado directamente en `docs/modelos/`, el enlace a una imagen comienza por `imagenes/`.
 
-## 5 Respaldo en los requisitos
+## Uso de la plantilla base
 
-Indica los UR y FR que respaldan las decisiones del modelo. Añade los NFR que condicionen un caso o su descripción. Explica la relación cuando el identificador no baste para comprenderla.
+La plantilla base se conserva en `plantilla-modelo-casos-de-uso.md`. Para iniciar un modelo, copia su contenido en `modelo-casos-de-uso.md` y completa ese documento. El modelo del repositorio contiene el resultado revisado de E1: actores, casos, diagrama y respaldo en los requisitos. La revisión v1.5 descompuso UC-08 en cinco casos. La revisión v1.6 incorpora en el apartado 6 el esquema vacío de descripción, alineado con la plantilla base v1.6. Utiliza Precondiciones y Postcondiciones. Las descripciones detalladas quedan pendientes.
 
-En E1 basta con un respaldo breve del diagrama. La tabla permite ampliar la trazabilidad después. No es necesario crear un caso independiente para cada FR o NFR.
+La imagen de esta referencia se conserva como `imagenes/casos-de-uso-acceso-cuentas-ayuda-e1.png`. El nombre se utiliza también para el trabajo del alumnado. La vista de E2 sigue el mismo criterio: `casos-de-uso-salud-recetas-e2.png`.
 
-| Elemento del modelo | UR y FR de referencia | NFR pertinentes | Relación con los requisitos |
-| --- | --- | --- | --- |
-| [Caso, actor o relación] | [Identificadores] | [Identificadores, si procede] | [Explica qué respaldan o condicionan.] |
+Una vez iniciado el modelado, continúa sobre el documento de trabajo. No vuelvas a copiar la plantilla sobre un modelo que ya contiene resultados. Consulta la plantilla cuando necesites sus instrucciones o el esquema de un apartado. Las mejoras de la estructura o las instrucciones se realizan en la plantilla; los actores, casos, diagramas y resultados del proyecto se incorporan al modelo.
 
-Consulta el [catálogo canónico](../requisitos/catalogo-requisitos.md) y la [SRS](../requisitos/srs.md). Si falta una condición, indica que está pendiente de aclaración. No la presentes como un requisito confirmado.
+## Versionado del modelo de casos de uso
 
-## 6 Descripciones de los casos de uso
+El modelo mantiene una ruta estable: `modelo-casos-de-uso.md`. Cada iteración amplía o revisa ese archivo. No se crean copias del documento con nombres como E1, E2 o «versión anterior».
 
-**Desarrollo posterior.** Este apartado queda pendiente en E1. Se completará cuando se trabajen las descripciones de los casos de uso. La existencia de este apartado no exige describirlos ahora.
+Los commits conservan los estados registrados del documento. Conservan también las imágenes y los archivos editables que se hayan incluido en esos commits. Para recuperar una vista anterior, consulta esos archivos en el mismo commit. Un enlace a una imagen externa que cambia no conserva su contenido dentro de Git.
 
-Repite el esquema siguiente para cada caso que se vaya a describir. Usa el identificador y el nombre del apartado 3. El nivel de detalle dependerá del trabajo previsto para ese caso.
+Durante una iteración puede haber varios commits. Al cerrarla, identifica el commit que contiene el estado revisado y registra su referencia en la evaluación de esa iteración. Por ejemplo, el estado de cierre de E1 se localizará mediante esa referencia, aunque el archivo se siga modificando en E2.
 
-### 6.1 Descripción de un caso
+La versión visible del documento, la iteración y el commit indican cosas diferentes. La versión identifica una revisión del documento. La iteración sitúa esa revisión en el proceso. El commit permite recuperar los archivos exactos. No es necesario cambiar la versión visible por cada corrección pequeña.
 
-**Identificador y nombre:** [Indica el caso.]
-
-**Estado de la descripción:** [Indica si es un resumen, una descripción esencial o una descripción detallada.]
-
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
-
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
-
-**Condiciones previas:** [Indica qué debe cumplirse antes de iniciar el caso.]
-
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
-
-**Escenario principal:** [Describe la secuencia entre los participantes y el sistema.]
-
-**Alternativas y errores:** [Describe las variaciones conocidas y su resultado.]
-
-**Resultado:** [Indica qué queda establecido al terminar y qué ocurre si el objetivo no se alcanza.]
-
-**Reglas y NFR pertinentes:** [Remite a los requisitos que condicionan el comportamiento.]
-
-**Preguntas abiertas:** [Registra lo que aún falta por confirmar.]
-
-Describe el comportamiento que se necesita. Las decisiones sobre componentes, clases o tecnologías pertenecen al trabajo de arquitectura y diseño.
-
-## 7 Continuidad entre iteraciones
-
-En E1, indica que esta es la primera vista del modelo. A partir de la siguiente iteración, resume qué elementos se incorporan y cuáles se revisan, conservan o retiran.
-
-[Explica la situación del modelo y su continuidad.]
-
-Este apartado describe la evolución del modelo. No sustituye la evaluación de la iteración. Los resultados de arquitectura, las pruebas y las desviaciones del plan se registran en sus documentos correspondientes.
-
-El historial completo de este archivo está en Git. Para localizar el estado de cierre de una iteración, utiliza el commit identificado al cerrar esa iteración. La [guía de esta carpeta](README.md) explica el procedimiento.
+Si se declara una línea base formal, se identifica mediante una etiqueta de Git y una entrada en el [historial de líneas base](../../CHANGELOG.md), conforme a las convenciones del repositorio. Cerrar una iteración no declara automáticamente una línea base. Para el trabajo ordinario del modelo basta con identificar el commit correspondiente.
