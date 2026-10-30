@@ -3,8 +3,8 @@
 | Campo | Valor |
 | --- | --- |
 | Proyecto | Proyecto Simbiosis |
-| Fecha | [dd/mm/aaaa] |
-| Versión | [Versión de trabajo] |
+| Fecha | [30/10/2026] |
+| Versión | [1.0] |
 | Estado | Borrador |
 
 ## Fuentes comunes
@@ -25,45 +25,46 @@ Como [rol], quiero [capacidad amplia], para [beneficio].
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** buscar mediante una palabra o frase
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario, quiero poder buscar recetas mediante palabras clave o frases en un campo de búsqueda dedicado, para encontrar recetas que contengan esa palabra o frase .
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR-085; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
-
+- **CA-01.** Dada una búsqueda por palabra clave  , cuando se ejecute la bsuqueda  , entonces apareceran las palabras que contengan la palabara e en titulo o descripcion .
+- **CA-02.** Dada una busqueda por frase, cuando se ejecute la busqueda , entonces se mosraran las recetas q contengan la frase en el mismo orden
+- **CA-03.**Dada una busqueda por frase, cuando se ejecute la busqueda y no existen q contengan la frase en el mismo orden, entonces el sistema indicara que no hay resultados de busqueda 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** buscar por ingredientes incluidos
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario, quiero  buscar recetas por ingredientes seleccionados, mostrando solo las que los contengan, para encontrar recetas que contengan esos ingredientes.
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR-086; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que una persona selecciona un ingrediente que desea encontrar , cuando ejecute la búsqueda , entonces deben aparecer solo recetas que contengan ese ingrediente .
+  
+- **CA-02.** Dado que una persona selecciona varios ingredientes que desea encontrar , cuando ejecute la búsqueda , entonces deben aparecer solo recetas que contengan todos esos ingredientes .
+- 
+- **CA-03.** Dado que una persona selecciona los ingredientes que desea encontrar , cuando ejecute la búsqueda y  si no existen recetas que contengan todos esos ingredientes , entonces el sistema indicara que no hay resultados de busqueda .
 
 ## US-03
 
-**Título:** [Capacidad]
+**Título:** Excluir ingredientes
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario, quiero excluir ingredientes de la búsqueda, para ver recetas que no contengan eso ingredientes.
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR-087; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que una persona selecciona un ingredientes que desea excluir, cuando ejecute la búsqueda, entonces solo pueden aparecer recetas que no contengan el  ingrediente seleccionado.
+- **CA-02.** Dado que una persona selecciona varios  ingredientes que desea excluir, cuando ejecute la búsqueda, entonces  entonces solo pueden aparecer recetas que no contengan ninguno de los ingredientes seleccionados.
+- **CA-03.** Dado que una persona selecciona los ingredientes que desea excluir, cuando ejecute la búsqueda y no existen recetas que no contengan ninguno de los ingredientes seleccionados , entonces el sistema indicara que no hay resultados de busqueda  .
 
 ## Revisión INVEST
 
